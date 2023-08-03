@@ -34,12 +34,41 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите данные (Фамилия Имя Отчество, дата рождения, номер телефона, пол):");
-        String userData = scanner.nextLine().trim(); // trim удаляет пробелы в начале и конце строки
+
+        System.out.println("Введите данные в произвольном порядке (Фамилия Имя Отчество, дата рождения, номер телефона, пол): ");
+        String userData = scanner.nextLine().trim();// trim удаляет пробелы в начале и конце строки
+
+        String lastName = "";
+        String firstName = "";
+        String middleName = "";
+        String dateOfBirthStr = "";
+        String phoneNumber = "";
+        char gender = '\0';
+
+        String[] data = userData.split("\\s+");//регулярное выражение \\s+ будет соответствовать строке,
+        // содержащей один или более пробельных символов подряд
+
+        for (String item : data) {
+            if (item.matches("[0-9]{2}.[0-9]{2}.[0-9]{4}")) {
+                dateOfBirthStr = item;
+            } else if (item.matches("[0-9]+")) {
+                phoneNumber = item;
+            } else if (item.equalsIgnoreCase("f") || item.equalsIgnoreCase("m")) {
+                gender = item.charAt(0);
+            } else {
+                if (lastName.isEmpty()) {
+                    lastName = item;
+                } else if (firstName.isEmpty()) {
+                    firstName = item;
+                } else {
+                    middleName = item;
+                }
+            }
+        }
 
         try {
             UserDataParser parser = new UserDataParser();
-            UserData user = parser.parseUserData(userData);
+            UserData user = parser.parseUserData(lastName, firstName, middleName, dateOfBirthStr, phoneNumber, gender);
             UserDataFileManager.saveUserDataToFile(user);
             System.out.println("Данные успешно сохранены в файл.");
         } catch (UserDataFormatException | IOException e) {
@@ -47,3 +76,4 @@ public class Main {
         }
     }
 }
+

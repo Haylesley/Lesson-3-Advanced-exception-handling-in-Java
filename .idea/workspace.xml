@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14306200-e8e7-461d-8c54-649620dfc29e" name="Changes" comment="Start1">
-      <change afterPath="$PROJECT_DIR$/src/UserData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserDataFileManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserDataFormatException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserDataParser.java" afterDir="false" />
+    <list default="true" id="14306200-e8e7-461d-8c54-649620dfc29e" name="Changes" comment="unbundled version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserDataParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserDataParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +62,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691042487078</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="unbundled version">
+      <option name="closed" value="true" />
+      <created>1691045110283</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1691045110283</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -82,6 +87,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start" />
     <MESSAGE value="Start1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start1" />
+    <MESSAGE value="unbundled version" />
+    <option name="LAST_COMMIT_MESSAGE" value="unbundled version" />
   </component>
 </project>
